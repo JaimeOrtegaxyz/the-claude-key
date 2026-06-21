@@ -53,9 +53,9 @@ If F13 does nothing, open **System Settings > Keyboard > Keyboard Shortcuts > Se
 
 ## Contributing
 
-Issues and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). By
-participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md). Found a
-security issue? Please follow [SECURITY.md](SECURITY.md).
+Issues and pull requests are welcome — see [CONTRIBUTING.md](.github/CONTRIBUTING.md). By
+participating you agree to the [Code of Conduct](.github/CODE_OF_CONDUCT.md). Found a
+security issue? Please follow [SECURITY.md](.github/SECURITY.md).
 
 ## License
 
