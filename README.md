@@ -1,7 +1,7 @@
 # The Claude Key
 
 <p align="center">
-  <img src="claude-key.png" alt="The Claude Key" width="220">
+  <img src="claude-key.webp" alt="The Claude Key" width="220">
 </p>
 
 Press **F13** and Claude Code launches in a new [Ghostty](https://ghostty.org) window at your home directory, ready to type.
