@@ -25,13 +25,15 @@ echo "  installed $SCRIPTS_DIR/start-claude.sh"
 
 # --- 3. Automator Quick Action (the Service), with $HOME substituted in ---
 mkdir -p "$SERVICES_DIR"
-rm -rf "$SERVICES_DIR/$WF"
+rm -rf "${SERVICES_DIR:?}/$WF"
 cp -R "$REPO_DIR/$WF" "$SERVICES_DIR/$WF"
 sed -i '' "s|__HOME__|$HOME|g" "$SERVICES_DIR/$WF/Contents/document.wflow"
 echo "  installed $SERVICES_DIR/$WF"
 
 # --- 4. Register the service so macOS Services sees it ---
-[ -x "$LSREGISTER" ] && "$LSREGISTER" -f "$SERVICES_DIR/$WF" 2>/dev/null || true
+if [ -x "$LSREGISTER" ]; then
+  "$LSREGISTER" -f "$SERVICES_DIR/$WF" 2>/dev/null || true
+fi
 
 # --- 5. Bind F13 to the service in pbs.plist (key_equivalent = U+F710 = NSF13FunctionKey) ---
 python3 - <<'PY'
