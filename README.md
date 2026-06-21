@@ -4,6 +4,12 @@
   <img src="claude-key.webp" alt="The Claude Key" width="220">
 </p>
 
+<p align="center">
+  <a href="https://github.com/JaimeOrtegaxyz/the-claude-key/actions/workflows/ci.yml"><img src="https://github.com/JaimeOrtegaxyz/the-claude-key/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+  <img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="Platform: macOS">
+</p>
+
 Press **F13** and Claude Code launches in a new [Ghostty](https://ghostty.org) window at your home directory, ready to type.
 
 It's wired to my particular stack. Feel free to adapt it to yours.
@@ -44,3 +50,19 @@ If F13 does nothing, open **System Settings > Keyboard > Keyboard Shortcuts > Se
 ```sh
 ./uninstall.sh
 ```
+
+## Contributing
+
+Issues and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). By
+participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md). Found a
+security issue? Please follow [SECURITY.md](SECURITY.md).
+
+## License
+
+[MIT](LICENSE) © Jaime Ortega
+
+---
+
+<sub>An independent community tool, not affiliated with or endorsed by Anthropic
+or the Ghostty project. "Claude" and "Ghostty" are the property of their
+respective owners.</sub>
