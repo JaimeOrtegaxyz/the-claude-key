@@ -1,5 +1,5 @@
 #!/bin/bash
-# Removes the F13 -> "Claude in Ghostty" launcher from this Mac.
+# Removes The Claude Key (F13 -> Claude Code in Ghostty) from this Mac.
 set -euo pipefail
 
 rm -f  "$HOME/Library/Scripts/start-claude.sh"

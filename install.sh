@@ -1,5 +1,5 @@
 #!/bin/bash
-# Installs the F13 -> "Claude in Ghostty" launcher on this Mac.
+# Installs The Claude Key (F13 -> Claude Code in Ghostty) on this Mac.
 # Idempotent: safe to re-run. Does not require sudo.
 set -euo pipefail
 
@@ -9,12 +9,12 @@ SERVICES_DIR="$HOME/Library/Services"
 WF="claudeGhostty.workflow"
 LSREGISTER="/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister"
 
-echo "==> Installing Claude-in-Ghostty F13 launcher"
+echo "==> Installing The Claude Key (F13 launcher)"
 
 # --- 1. Prerequisite checks (warn only) ---
-[ -d "/Applications/Ghostty.app" ] || echo "  ! WARNING: /Applications/Ghostty.app not found — install Ghostty first."
+[ -d "/Applications/Ghostty.app" ] || echo "  ! WARNING: /Applications/Ghostty.app not found. Install Ghostty first."
 if ! command -v claude >/dev/null 2>&1 && [ ! -x "$HOME/.local/bin/claude" ]; then
-  echo "  ! WARNING: 'claude' CLI not found in PATH or ~/.local/bin — install Claude Code first."
+  echo "  ! WARNING: 'claude' CLI not found in PATH or ~/.local/bin. Install Claude Code first."
 fi
 
 # --- 2. start-claude.sh (runs inside the new Ghostty window) ---
@@ -57,7 +57,7 @@ killall pbs 2>/dev/null || true
 cat <<'EOF'
 ==> Done.
 
-Press F13 to test. On the FIRST run you may see one-time prompts — click Allow:
+Press F13 to test. On the FIRST run you may see one-time prompts. Click Allow:
   - an Automation prompt ("... wants to control Ghostty")
   - Ghostty asking to allow executing start-claude.sh
 
