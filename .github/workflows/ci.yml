@@ -12,7 +12,7 @@ jobs:
     name: ShellCheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Run ShellCheck
         run: shellcheck install.sh uninstall.sh
 
@@ -20,7 +20,7 @@ jobs:
     name: Validate workflow XML
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check plist / wflow well-formedness
         run: |
           find claudeGhostty.workflow \( -name '*.plist' -o -name '*.wflow' \) -print0 \
