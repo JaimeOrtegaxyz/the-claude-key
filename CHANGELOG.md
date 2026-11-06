@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Pressing F13 while Ghostty is closed no longer opens an extra empty Ghostty window
+  next to the Claude one: a cold start now launches Ghostty with the Claude command
+  as its first window.
+
 ## [1.0.0] - 2026-06-21
 
 ### Added

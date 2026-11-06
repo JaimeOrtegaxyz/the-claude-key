@@ -59,7 +59,13 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>/usr/bin/osascript -e 'tell application id "com.mitchellh.ghostty"' -e 'set cfg to new surface configuration' -e 'set command of cfg to "__HOME__/Library/Scripts/start-claude.sh"' -e 'set initial working directory of cfg to "__HOME__"' -e 'set w to new window with configuration cfg' -e 'activate window w' -e 'end tell'</string>
+					<string># Ghostty not running: launch it so its first window IS the Claude window.
+# (Telling a closed Ghostty to make a window first opens its own default window.)
+if ! /usr/bin/pgrep -xq ghostty; then
+  /usr/bin/open -a Ghostty --args --command=__HOME__/Library/Scripts/start-claude.sh --working-directory=__HOME__
+  exit 0
+fi
+/usr/bin/osascript -e 'tell application id "com.mitchellh.ghostty"' -e 'set cfg to new surface configuration' -e 'set command of cfg to "__HOME__/Library/Scripts/start-claude.sh"' -e 'set initial working directory of cfg to "__HOME__"' -e 'set w to new window with configuration cfg' -e 'activate window w' -e 'end tell'</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
